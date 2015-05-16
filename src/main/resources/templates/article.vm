@@ -1,0 +1,53 @@
+<html>
+<head>
+</head>
+<title>Hello World</title>
+<link rel="stylesheet" type="text/css" href="/style.css"/>
+<body>
+<h1>GRBoard</h1>
+
+<form action="register" method="post">
+    <table>
+        <tr>
+            <td>Title</td>
+            <td><input type="text" name="title">
+                #if(${message1})
+                ${message1}
+                #end
+            </td>
+        </tr>
+        <tr>
+            <td>Content</td>
+            <td><textarea rows="10" cols="30" name="content"></textarea>
+                #if(${message2})
+                    ${message2}
+                #end
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Register"></td>
+        </tr>
+    </table>
+</form>
+
+<table border="1" cellpadding="5">
+    <thead>
+    <tr>
+        <th>제목</th>
+        <th>내용</th>
+        <th>등록시간</th>
+    </tr>
+    </thead>
+    <tbody>
+    #foreach($article in ${articleList})
+    <tr>
+        <td>${article.title}</td>
+        <td>${article.contents}</td>
+        <td>${article.registeredTime}</td>
+    </tr>
+    #end
+    </tbody>
+</table>
+</body>
+</html>

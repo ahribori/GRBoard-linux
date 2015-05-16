@@ -1,0 +1,12 @@
+<html>
+<head>
+</head>
+    <title>Hello World</title>
+    <link rel="stylesheet" type="text/css" href="/style.css"/>
+<body>
+<h1>성공!!</h1>
+${message}
+${time}
+${title}
+</body>
+</html>
